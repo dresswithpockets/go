@@ -196,6 +196,11 @@ redo:
 		}
 		s.tok = _Dot
 
+	case '?':
+		s.nextch()
+		s.nlsemi = true
+		s.tok = _Question
+
 	case '+':
 		s.nextch()
 		s.op, s.prec = Add, precAdd
